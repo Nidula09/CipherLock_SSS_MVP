@@ -9,8 +9,9 @@ IT21336072 - R.P.K.D. Rajapaksha
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Credentials](#credentials)
+- [Contributers](#contributers)
+
 
 ## Installation
 ### 1. Clone the repository:
@@ -20,7 +21,9 @@ IT21336072 - R.P.K.D. Rajapaksha
 
 Or Download the ZIP File to the Desktop
 
-  <img src="https://github.com/Nidula09/SSS_MVP_IT21391668_IT21336072/assets/119744082/588d0a2f-a23f-4c42-8175-91dba3c2c551" alt="ZIP_DOWNLOAD" width="500" height="400"/>
+  <img src="https://github.com/Nidula09/CipherLock_SSS_MVP/assets/119744082/e1b4d58c-9003-4a34-b799-2751652f086e" alt="ZIP_DOWNLOAD" width="500" height="400"/>
+
+
 
  ### 2. Install dependencies:
 
@@ -40,7 +43,7 @@ Or Download the ZIP File to the Desktop
    
      Check the box that says "Add Python to PATH".
    
-     Click "Install Now
+     Click "Install Now"
    
    #### On Linux
    
@@ -105,5 +108,47 @@ You can install pycryptodome, joblib, scikit-learn simultaneously with:
 
 
 ## Usage
-1. Locate the CipherLock Folder
-2. c
+1. Locate the CipherLock_SSS_MVP Folder
+   
+2. Go to the folder
+  ```
+ cd CipherLock_SSS_MVP
+ ```
+3. Navigate to CipherLock
+```
+ cd CipherLock
+ ```
+4. Navigate to Test09 - Copy
+```
+ cd 'Test09 - Copy'
+ ```
+5. Run the app.py using python
+```
+ python app.py
+ ```
+6. Enter the given http link in any browser. (The port number may differ):
+```
+ http://127.0.0.1:5000
+ ```
+
+## Credentials
+
+1. Admin user:
+  ```
+ username: admin1
+ password: adpass1
+ ```
+
+1. User:
+  ```
+ username: user1
+ password: pass1
+ ```
+
+## Contributers
+
+1. IT21391668 - H.N.D. Madhubhashana
+
+2. IT21336072 - R.P.K.D. Rajapaksha
+
+# Thank you :)
