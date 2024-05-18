@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="welcome-message">Welcome {{ username }}</h1>
+
+        <form action="/store" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div id="password-strength-indicator"></div>
+            <input type="submit" value="Store Password">
+        </form>
+
+        <hr>
+        <h2>Decrypt Password</h2>
+        <form action="/decrypt" method="POST">
+            <label for="ciphertext">Ciphertext:</label>
+            <input type="text" id="ciphertext" name="ciphertext" required><br>
+            <input type="submit" value="Decrypt">
+        </form>
+
+        {% if is_admin %}
+        <hr>
+        <h2>All Stored Passwords</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Name</th>
+                    <th>Cipher</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user, name, cipher in ciphers %}
+                <tr>
+                    <td>{{ user }}</td>
+                    <td>{{ name }}</td>
+                    <td>{{ cipher }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        <hr>
+        <form action="/clear" method="POST" onsubmit="return confirm('Are you sure you want to delete all stored passwords? This action cannot be undone.');">
+            <input type="submit" value="Clear Stored Passwords">
+        </form>
+
+        <hr>
+        <form action="/logout" method="POST">
+            <input type="submit" value="Logout">
+        </form>
+    </div>
+
+    <footer class="footer">
+        &copy; 2024 CipherLock. All rights reserved.
+    </footer>
+
+    <script>
+        function updatePasswordStrength(password) {
+            fetch('/predict_strength', {
+                method: 'POST',
+                body: new URLSearchParams({ password: password }),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const passwordStrengthIndicator = document.getElementById('password-strength-indicator');
+                    passwordStrengthIndicator.textContent = `Password Strength: ${data.predicted_strength}`;
+                })
+                .catch(error => {
+                    console.error('Error predicting password strength:', error);
+                });
+        }
+
+        document.getElementById('password').addEventListener('input', (event) => {
+            const password = event.target.value;
+            updatePasswordStrength(password);
+        });
+    </script>
+</body>
+</html>

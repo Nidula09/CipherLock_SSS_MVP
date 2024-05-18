@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Stored Passwords</title>
+</head>
+<body>
+    <h1>All Stored Passwords</h1>
+    <ul>
+        {% for user_ciphers in ciphers %}
+        <li><strong>{{ user_ciphers[0] }}</strong></li>
+        <ul>
+            {% for name, cipher in user_ciphers[1].items() %}
+            <li>{{ name }} - <span class="cipher">{{ cipher }}</span></li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </ul>
+</body>
+</html>

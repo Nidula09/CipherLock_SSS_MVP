@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login_style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to CipherLock</h1>
+        <form action="/authenticate" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="Login">
+        </form>
+        <span id="error-msg" class="error-msg">{% if error %}{{ error }}{% endif %}</span>
+    </div>
+    <footer class="footer">
+        &copy; 2024 CipherLock. All rights reserved.
+    </footer>
+</body>
+</html>
