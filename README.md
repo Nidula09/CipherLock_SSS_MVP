@@ -16,7 +16,7 @@ IT21336072 - R.P.K.D. Rajapaksha
 ## Installation
 ### 1. Clone the repository:
 ```
- git clone https://github.com/Nidula09/SSS_MVP_IT21391668_IT21336072.git
+ git clone https://github.com/Nidula09/CipherLock_SSS_MVP.git
 ```
 
 Or Download the ZIP File to the Desktop
