@@ -16,7 +16,7 @@ IT21336072 - R.P.K.D. Rajapaksha
 ### 1. Clone the repository:
 ```
  git clone https://github.com/Nidula09/SSS_MVP_IT21391668_IT21336072.git
-
+```
 
 Or Download the ZIP File to the Desktop
 
@@ -79,5 +79,17 @@ Or Download the ZIP File to the Desktop
 ```
  brew install flask
  ```
+### Install pycryptodome
+ 
+```
+ pip install pycryptodome
+ ```
+
+### Install pycryptodome
+ 
+```
+ pip install pycryptodome
+ ```
+
 
 ## Usage
