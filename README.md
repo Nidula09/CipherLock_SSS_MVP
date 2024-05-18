@@ -24,7 +24,7 @@ Or Download the ZIP File to the Desktop
 
  ### 2. Install dependencies:
 
-### Install Python
+### a. Install Python
 
 #### On Windows
 
@@ -65,7 +65,7 @@ Or Download the ZIP File to the Desktop
  brew install python
 ```
 
-### Install Flask
+### b. Install Flask
  
 ####   In Windows
 ```
@@ -79,16 +79,28 @@ Or Download the ZIP File to the Desktop
 ```
  brew install flask
  ```
-### Install pycryptodome
+### c. Install pycryptodome
  
 ```
  pip install pycryptodome
  ```
 
-### Install pycryptodome
+### d. Install joblib
  
 ```
- pip install pycryptodome
+ pip install joblib
+ ```
+
+### e. Install scikit-learn
+ 
+```
+ pip install scikit-learn
+ ```
+
+You can install pycryptodome, joblib, scikit-learn simultaneously with:
+
+```
+ pip install pycryptodome joblib scikit-learn
  ```
 
 
