@@ -105,3 +105,5 @@ You can install pycryptodome, joblib, scikit-learn simultaneously with:
 
 
 ## Usage
+1. Locate the CipherLock Folder
+2. c
